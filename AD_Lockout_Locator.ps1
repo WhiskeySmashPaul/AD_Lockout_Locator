@@ -1,5 +1,8 @@
-$UserName = Read-Host -Prompt 'Please enter username'
+  #Obtain information to search for from user
+  $UserName = Read-Host -Prompt 'Please enter username'
   $DaysToSearch = Read-Host -Prompt 'Please enter how many days to search prior to today'
+  
+  #Gets a list of domain controllers to search through each DC
   $ComputerName = (Get-ADDomainController -Filter * |  Select-Object -ExpandProperty Name)
 
 
